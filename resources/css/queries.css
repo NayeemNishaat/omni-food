@@ -1,0 +1,221 @@
+/* Big screen tablets (Width smaller than the 1140px row): 1024 to 1200px */
+@media only screen and (max-width: 1200px) {
+	.hero-text-box {
+		width: 100%;
+		padding: 0 2%;
+	}
+
+	.row {
+		padding: 0 2%;
+	}
+
+	.footer-nav li,
+	.social-links li {
+		margin-right: 10px;
+	}
+
+	.social-links li a:link,
+	.social-links li a:visited {
+		font-size: 160%;
+	}
+
+	footer p {
+		margin-top: 10px;
+	}
+
+	footer {
+		padding: 40px 0 30px 0;
+	}
+
+	.works-step:last-of-type {
+		margin-bottom: 35px;
+	}
+
+	.plan-box span {
+		overflow: hidden;
+	}
+
+	section {
+		padding: 50px 0;
+	}
+}
+
+/* Small screen tablets to big screen tablets: 768 to 1023px */
+@media only screen and (max-width: 1023px) {
+	html {
+		font-size: 18px;
+	}
+
+	section {
+		padding: 60px 0;
+	}
+
+	.btn-app img {
+		height: 40px;
+	}
+
+	.long-copy {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	h3 {
+		height: 45px;
+	}
+
+	.steps-box:last-child {
+		margin-top: 30px;
+	}
+
+	.works-step {
+		margin-bottom: 30px;
+	}
+
+	.logo {
+		height: 75px;
+	}
+
+	.icon-small {
+		margin-right: -5px;
+	}
+
+	.plan-box {
+		width: 95%;
+		margin-left: 2.5%;
+	}
+
+	.section-cities .box {
+		padding: 0;
+	}
+
+	.contact-form {
+		width: 75%;
+	}
+
+	.row {
+		padding: 0 2%;
+	}
+}
+
+/* Small screen phones to small screen tablets: 481 to 767px */
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+
+	section {
+		padding: 30px 0;
+	}
+
+	.row {
+		padding: 0 4%;
+	}
+
+	.col {
+		width: 100%;
+		margin: 0 0 1% 0;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.section-features .long-copy {
+		margin-bottom: 10px;
+	}
+
+	.long-copy {
+		width: 100%;
+		margin-left: 0%;
+		text-align: justify;
+	}
+
+	.icon-big {
+		margin-bottom: 0;
+	}
+
+	.steps-box:first-child {
+		text-align: center;
+	}
+
+	.steps-box div:last-child {
+		text-align: center;
+	}
+
+	.works-step div {
+		height: 40px;
+		width: 40px;
+		padding: 0;
+		margin-right: 15px;
+	}
+
+	.btn-app:link,
+	.btn-app:visited {
+		border: none;
+		margin: 0 auto;
+	}
+
+	.btn-app:last-child {
+		margin-left: 0;
+	}
+
+	.app-screen {
+		width: 40%;
+	}
+
+	h3 {
+		height: 20px;
+	}
+
+	cite {
+		margin-top: -35px;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	.plan-box div {
+		margin-top: 4%;
+	}
+
+	.contact-form .row {
+		margin-top: 5%;
+	}
+
+	.contact-form .row:last-child {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	.footer-nav {
+		float: none;
+		text-align: center;
+		margin-top: -20px;
+	}
+
+	.social-links {
+		float: none;
+		text-align: center;
+		margin-top: 1%;
+	}
+
+	footer {
+		padding: 40px 0 10px 0;
+	}
+
+	footer p {
+		margin-top: 20px;
+	}
+}
+
+/* Small screen phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
+	section {
+		padding: 20px 0;
+	}
+
+	.contact-form {
+		width: 100%;
+	}
+}

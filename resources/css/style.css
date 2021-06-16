@@ -1,0 +1,552 @@
+/* Orange Color --> #e67e22 */
+
+/* ===============Basic Setup=============== */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #fff;
+	color: #585858;
+	font-family: "Cormorant Garamond", serif;
+	font-weight: 400;
+	font-size: 20px;
+	text-rendering: optimizeLegibility; /* Point: Helps to render fonts perfectly */
+	overflow-x: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after {
+	/* Is used generally to the parent of the floated element */
+	content: ".";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/* ===========Reusable Components=========== */
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto; /* Remark: Short hand, margin: 0 auto 0 auto; >> top --> 0, right --> auto, bottom -->0, left --> auto Remark: Even shorter, margin: 0 auto; >> top, bottom --> 0 and left, right --> auto */
+}
+
+section {
+	padding: 80px 0; /* Padding used not margin because when we will use background-image then the image will be in the area of the section box. But if we add mergin then the background-image will not cover that margin area because it's limited to the box area. */
+}
+
+.box {
+	padding: 1%; /* Margin is not good option to use for width. Because it takes the space outside of the element.  */
+}
+
+/* -----------------Headings----------------- */
+
+h1,
+h2,
+h3 {
+	/* Because of the normalize.css it introduces some mergins into the h1 element. */
+	/* Important: Now the font size of h1 element is relative to the parent html element's 200%. */
+	font-weight: 300;
+}
+
+h1 {
+	margin: 0 0 20px 0;
+	color: #fff;
+	letter-spacing: 1px;
+	font-size: 240%;
+	word-spacing: 4px;
+}
+
+h2 {
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+h2:after {
+	/* The after selector is used to insert some content into the html after the appearing of the corresponding element */
+	display: block;
+	height: 1px;
+	background: #e67e22;
+	content: " ";
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+h3 {
+	font-size: 130%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+/* ----------------Paragraphs---------------- */
+
+.long-copy {
+	line-height: 145%; /* Line Spacing */
+	width: 70%;
+	margin-left: 15%;
+	font-size: 110%;
+	text-align: center;
+}
+
+.box p {
+	line-height: 145%;
+	font-size: 95%;
+	text-align: justify;
+}
+
+/* ----------------Icons---------------- */
+
+.icon-big {
+	font-size: 400%;
+	display: block; /* Point: Block elements force a line break. */
+	color: #e67e22;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.icon-small {
+	color: #e67e22;
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+	font-size: 120%;
+	margin-right: 10px;
+	/* Secrets to align text and icons */
+	vertical-align: middle;
+	line-height: 120%;
+	margin-top: 3px;
+}
+
+/* -----------------Links----------------- */
+a:link,
+a:visited {
+	color: #e77511;
+	text-decoration: none;
+	border-bottom: 1px solid #e67e22;
+	transition: border-bottom 0.5s, color 0.5s;
+}
+
+a:hover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent;
+}
+
+/* -----------------Buttons----------------- */
+
+/* Pseudo class */
+.btn,
+input[type="submit"] {
+	/* Point: Inline-block elements doesn't force a line break but it has padding and margin attributes unlike a normal inline element. */
+	display: inline-block; /* Remark: Normally <a> is an inline element but now it is converted to inline-block element. */
+	padding: 10px 30px;
+	font-weight: 300;
+	text-decoration: none;
+	border-radius: 200px;
+	transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+	background-color: #bf6516;
+	border: 1px solid #bf6516;
+	color: #fff;
+	margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+	border: 1px solid #bf6516;
+	color: #bf6516;
+}
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+	background-color: #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	border: 1px solid #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+	border: 1px solid #e67e22;
+	color: #fff;
+}
+
+/* ================Header================= */
+
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./img/hero.jpg); /* Remark: 1st value is the upper layer and the second value is the bottom layer */
+	background-size: cover;
+	background-position: center;
+	height: 100vh; /* Point: Height is 100% of the view height/port. */
+	background-attachment: fixed;
+}
+
+.hero-text-box {
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Remark: translate(x, y) */
+}
+
+.logo {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 55px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	transition: border 1s;
+	color: #fff;
+	text-decoration: none;
+	/* font-size: 100%; */ /* Remark: Default 100% no need to specify! */
+	padding: 8px 8px;
+	border: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	border: 2px solid #e67e22; /* Important: Remark: In order to see the border we need to define it before the hover state i.e. in link state. */
+}
+
+/* ================Features================= */
+
+.section-features .long-copy {
+	margin-bottom: 30px;
+}
+
+/* ================Meals================= */
+.section-meals {
+	padding: 0;
+}
+
+.meals-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.meals-showcase li {
+	display: block;
+	float: left; /* Is used generally to the child */
+	width: 25%;
+}
+
+.meal-photo {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+.meal-photo img {
+	opacity: 0.7;
+	width: 100%;
+	height: auto;
+	transform: scale(1.15);
+	transition: transform 0.5s, opacity 0.5s; /* Now the images are bigger than it's container (Overflown). So we will hide overflow in the container, in this case "meal-photo" */
+}
+
+.meal-photo img:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+/* ==============How It Works=============== */
+
+.section-steps {
+	background-color: #f3f3f3;
+}
+
+/* Selecting first .steps-box */
+.steps-box:first-child {
+	text-align: right;
+	margin-top: 30px;
+	padding-right: 3%;
+}
+
+.steps-box:last-child {
+	margin-top: 70px;
+	padding-left: 3%;
+}
+
+.app-screen {
+	width: 40%;
+}
+
+.works-step {
+	margin-bottom: 50px;
+}
+
+/* Pretty similar to last-child */
+.works-step:last-of-type {
+	margin-bottom: 80px;
+}
+
+.works-step div {
+	color: #e67e22;
+	border: 2px solid #e67e22;
+	display: block; /* Because we want the number and text side by side and also don't want any line break. */
+	border-radius: 50%;
+	height: 55px;
+	width: 55px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	font-size: 150%;
+	margin-right: 25px;
+}
+
+.btn-app:link,
+.btn-app:visited {
+	border: none;
+}
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
+}
+
+/* ==============Cities=============== */
+.box img {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+.city-feature {
+	margin-bottom: 5px;
+}
+
+/* ==============Testimonials=============== */
+
+.section-testimonials {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./img/back-customers.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	text-align: justify;
+	height: 150px;
+	position: relative;
+	margin-top: 40px;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 450%;
+	display: block;
+	position: absolute;
+	left: -5px;
+	top: -3px;
+	color: #08e02c;
+}
+
+cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block; /* In order to force a line break to make the author name in a seperate line. */
+	text-align: center;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* ==============Sign Up=============== */
+
+.section-plans {
+	background-color: #e7e7e7;
+}
+
+.plan-box {
+	background-color: #fff;
+	border-radius: 30px;
+	width: 90%;
+	margin-left: 5%;
+	box-shadow: 0 2px 2px #efefef; /* (x y blur color) */
+}
+
+.plan-box div {
+	padding: 15px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+	font-size: 300%;
+	margin-bottom: 10px;
+	font-weight: 300;
+	color: #e67e22;
+	text-align: center;
+}
+
+.plan-price span {
+	font-size: 30%;
+	font-weight: 400;
+}
+
+.plan-price-meal {
+	font-size: 90%;
+}
+
+.plan-box ul {
+	list-style: none;
+}
+
+.plan-box ul li {
+	padding: 5px 0;
+}
+
+.plan-box div:first-child {
+	background-color: #f7f7f7;
+	border-radius: 30px; /* When manipulating the first/last child the border-radius disappears hence it's redefined in its child. */
+}
+
+.plan-box div:last-child {
+	text-align: center;
+	border: none;
+}
+
+/* ==============Form=============== */
+
+.contact-form {
+	width: 60%;
+	margin: 0 auto;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+.contact-form input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	border-radius: 3px;
+	padding: 7px;
+	border: 1px solid #ccc;
+}
+
+textarea {
+	height: 100px;
+}
+
+input[type="checkbox"] {
+	margin: 10px 5px 10px 0;
+}
+
+/* ==============Footer=============== */
+
+footer {
+	background-color: #333;
+	padding: 50px;
+}
+
+.footer-nav {
+	list-style: none;
+	float: left;
+}
+
+.social-links {
+	list-style: none;
+	float: right;
+}
+
+.footer-nav li,
+.social-links li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+	margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+	text-decoration: none;
+	border: 0;
+	color: #888;
+	transition: color 0.5s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+	color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+	font-size: 180%;
+}
+
+.ion-social-facebook-outline:hover,
+.ion-social-facebook-outline:active {
+	color: #3b5998;
+}
+.ion-social-twitter-outline:hover,
+.ion-social-twitter-outline:active {
+	color: #00aced;
+}
+.ion-social-instagram-outline:hover,
+.ion-social-instagram-outline:active {
+	color: #517fa4;
+}
+.ion-social-googleplus-outline:hover,
+.ion-social-googleplus-outline:active {
+	color: #dd4b39;
+}
+
+footer p {
+	color: #888;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 90%;
+}
