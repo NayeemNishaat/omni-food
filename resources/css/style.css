@@ -211,6 +211,7 @@ header {
 		url(./img/hero.jpg); /* Remark: 1st value is the upper layer and the second value is the bottom layer */
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat !important;
 	height: 100vh; /* Point: Height is 100% of the view height/port. */
 	background-attachment: fixed;
 }
