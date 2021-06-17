@@ -208,11 +208,12 @@ header {
 	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./img/hero.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url(./img/hero.jpg); /* Remark: 1st value is the upper layer and the second value is the bottom layer */
+		url(./img/hero.jpg) center center no-repeat; /* Remark: 1st value is the upper layer and the second value is the bottom layer */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat !important;
 	height: 100vh; /* Point: Height is 100% of the view height/port. */
+	z-index: -1;
 	background-attachment: fixed;
 }
 
