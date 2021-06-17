@@ -207,6 +207,16 @@
 	footer p {
 		margin-top: 20px;
 	}
+
+	header {
+		position: static;
+		height: 100%;
+		background: url(./img/hero.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 }
 
 /* Small screen phones: 0 to 480px */
@@ -217,14 +227,5 @@
 
 	.contact-form {
 		width: 100%;
-	}
-
-	header {
-		height: 100%;
-		background: url(./img/hero.jpg) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
 	}
 }
