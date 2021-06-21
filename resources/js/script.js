@@ -100,7 +100,7 @@ $(document).ready(function () {
 				`animated animate__animated animate__fadeInUp`
 			);
 		},
-		{ offset: `30%` }
+		{ offset: `40%` }
 	);
 
 	$(`.js--wp-3`).waypoint(
@@ -109,14 +109,14 @@ $(document).ready(function () {
 				`animated animate__animated animate__flipInX`
 			);
 		},
-		{ offset: `30%` } // Remark: It is the distance between the content and the tip of the viewport!
+		{ offset: `40%` } // Remark: It is the distance between the content and the tip of the viewport!
 	);
 
 	$(`.js--wp-4`).waypoint(
 		function (_) {
 			$(`.js--wp-4`).addClass(`animate__animated animate__bounce`);
 		},
-		{ offset: `25%` }
+		{ offset: `35%` }
 	);
 
 	// Segment: Mobile navigation
