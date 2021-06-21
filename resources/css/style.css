@@ -197,6 +197,8 @@ input[type="submit"]:active {
 /* ================Header================= */
 
 header {
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./img/hero.jpg);
 	background-image: -webkit-gradient(
 			linear,
 			left top,
@@ -204,8 +206,6 @@ header {
 			from(rgba(0, 0, 0, 0.7)),
 			to(rgba(0, 0, 0, 0.7))
 		),
-		url(./img/hero.jpg);
-	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./img/hero.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./img/hero.jpg); /* Remark: 1st value is the upper layer and the second value is the bottom layer */
@@ -232,6 +232,15 @@ header {
 	margin-top: 20px;
 }
 
+.logo-black {
+	display: none;
+	height: 60px;
+	width: auto;
+	float: left;
+	margin: 10px 0;
+}
+
+/* Main navi */
 .main-nav {
 	float: right;
 	list-style: none;
@@ -247,8 +256,7 @@ header {
 .main-nav li a:visited {
 	-webkit-transition: border 1s;
 	-o-transition: border 1s;
-	transition: border 1s;
-	color: #fff;
+	transition: all 1s;
 	text-decoration: none;
 	/* font-size: 100%; */ /* Remark: Default 100% no need to specify! */
 	padding: 8px 8px;
@@ -257,9 +265,54 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active {
+	color: #fff;
 	border: 2px solid #e67e22; /* Important: Remark: In order to see the border we need to define it before the hover state i.e. in link state. */
 }
 
+.main-nav + input {
+	display: none;
+}
+
+/* Mobile Navi */
+.mobile-nav-icon {
+	float: right;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i {
+	color: #fff;
+	font-size: 200%;
+}
+
+/* Steaky Navi */
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.986);
+	-webkit-box-shadow: 0 2px 1px #dadada;
+	box-shadow: 0 2px 1px #dadada; /* Remark: Vertically 2px */
+	z-index: 1;
+}
+
+.sticky .main-nav {
+	margin-top: 30px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+	padding: 8px 8px;
+}
+
+.sticky .logo {
+	display: none;
+}
+
+.sticky .logo-black {
+	display: block;
+}
 /* ================Features================= */
 
 .section-features .long-copy {
@@ -381,6 +434,8 @@ header {
 /* ==============Testimonials=============== */
 
 .section-testimonials {
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url(./img/back-customers.jpg);
 	background-image: -webkit-gradient(
 			linear,
 			left top,
@@ -388,8 +443,6 @@ header {
 			from(rgba(0, 0, 0, 0.7)),
 			to(rgba(0, 0, 0, 0.7))
 		),
-		url(./img/back-customers.jpg);
-	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./img/back-customers.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url(./img/back-customers.jpg);
@@ -589,4 +642,19 @@ footer p {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 90%;
+}
+
+/* ==============Animations=============== */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+	/* display: none;  Remark: Doesn't work. It simply hides the whole element! */
+	opacity: 0;
+	/* animation-duration: 0.5s; Remark: For controlling the animation speed*/
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+	opacity: 1;
 }
