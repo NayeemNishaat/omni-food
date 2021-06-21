@@ -371,11 +371,11 @@
 	}
 
 	.main-nav + input {
-		width: 40%;
-		left: 33%;
+		width: 37%;
+		left: 36%;
 	}
 
 	.sticky .main-nav + input {
-		left: 37%;
+		left: 40%;
 	}
 }
