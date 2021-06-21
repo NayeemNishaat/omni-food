@@ -175,6 +175,17 @@ $(document).ready(function () {
 	}); */
 
 	// Segment: Preventing element resize on keyboard opening on mobile
-	var windowHeight = $(window).innerHeight();
-	$("body").css({ height: windowHeight });
+	setTimeout(function () {
+		const viewheight = $(window).height();
+		const viewwidth = $(window).width();
+		const viewport = $("meta[name=viewport]");
+		viewport.attr(
+			"content",
+			"height=" +
+				viewheight +
+				"px, width=" +
+				viewwidth +
+				"px, initial-scale=1.0"
+		);
+	}, 300);
 });
