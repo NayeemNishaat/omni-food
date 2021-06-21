@@ -256,6 +256,8 @@ header {
 .main-nav li a:visited {
 	-webkit-transition: border 1s;
 	-o-transition: border 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 	text-decoration: none;
 	/* font-size: 100%; */ /* Remark: Default 100% no need to specify! */
