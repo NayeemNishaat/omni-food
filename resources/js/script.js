@@ -173,4 +173,8 @@ $(document).ready(function () {
 			$(icon).addClass(`ion-navicon`);
 		}
 	}); */
+
+	// Segment: Preventing element resize on keyboard opening on mobile
+	var windowHeight = $(window).innerHeight();
+	$("body").css({ height: windowHeight });
 });
