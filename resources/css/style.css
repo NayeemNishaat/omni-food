@@ -273,6 +273,7 @@ header {
 
 .main-nav + input {
 	display: none;
+	color: white;
 }
 
 /* Mobile Navi */
