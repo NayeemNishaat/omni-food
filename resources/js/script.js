@@ -141,7 +141,7 @@ $(document).ready(function () {
 
 	const scrollControl = function (scroll = false, close = true) {
 		if (scroll) {
-			document.querySelector(`.main-nav`).style.opacity = 1;
+			// document.querySelector(`.main-nav`).style.opacity = 1;
 			const x = window.scrollX;
 			const y = window.scrollY;
 			window.onscroll = function () {
@@ -149,10 +149,10 @@ $(document).ready(function () {
 			};
 		} else {
 			window.onscroll = null;
-			document.querySelector(`.main-nav`).style.opacity = 0;
 
 			if (close) {
 				menuControl();
+				flag = !flag;
 			}
 		}
 	};
@@ -191,3 +191,24 @@ $(document).ready(function () {
 		);
 	}, 300);
 });
+
+// Segment: Favicon
+// Remark: We can use this website https://realfavicongenerator.net/ to generate favicon for our website!
+
+// Segment: Optimizing Website
+// Key: Image Optimization
+// Point: After development we will resize the images (twice of their rendered size + 50) for better performance of our website.
+// Point: Then we can use this website https://imagecompressor.com/ to compress our large images.
+
+// Key: Minifying Code
+// Point: Use web tools to minify our CSS, JS and HTML codes!
+
+// Segment: HTML Validator and SEO
+// Point: Use this website https://validator.w3.org/ to validate our HTML code!
+// Point: Optimize the website for search engine by making a meta-description, using keywords in meta-description, heading, title and using backlinks.
+
+// Key: Hosting and Domain Registration
+// Point: After optimizing the website we need to buy a domain name and a hosting service to upload the website in the internet.
+
+// Key: Google Analytics
+// Point: Finally use Google Analytics to maintain the website!
