@@ -107,6 +107,10 @@
 		background-attachment: scroll;
 	}
 
+	.section-testimonials {
+		background-attachment: scroll;
+	}
+
 	section {
 		padding: 30px 0;
 	}
@@ -150,6 +154,7 @@
 		transition: transform 0.3s ease-in;
 		transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 		z-index: 2;
+		/* opacity: 0; */
 	}
 
 	@-webkit-keyframes navAnimation {
