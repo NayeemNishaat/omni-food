@@ -141,6 +141,7 @@ $(document).ready(function () {
 
 	const scrollControl = function (scroll = false, close = true) {
 		if (scroll) {
+			document.querySelector(`.main-nav`).style.opacity = 1;
 			const x = window.scrollX;
 			const y = window.scrollY;
 			window.onscroll = function () {
@@ -148,6 +149,7 @@ $(document).ready(function () {
 			};
 		} else {
 			window.onscroll = null;
+			document.querySelector(`.main-nav`).style.opacity = 0;
 
 			if (close) {
 				menuControl();
