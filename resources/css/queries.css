@@ -148,11 +148,7 @@
 		-webkit-transform: translateX(100%);
 		-ms-transform: translateX(100%);
 		transform: translateX(100%);
-		-webkit-transition: -webkit-transform 0.3s ease-in;
-		transition: -webkit-transform 0.3s ease-in;
-		-o-transition: transform 0.3s ease-in;
 		transition: all 0.3s ease-in;
-		transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 		z-index: 2;
 		opacity: 0;
 	}
@@ -260,7 +256,6 @@
 	}
 
 	.overlay {
-		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100vh;

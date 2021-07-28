@@ -139,6 +139,7 @@ $(document).ready(function () {
 		});
 	};
 
+	// Key: Controlling Scroll
 	const scrollControl = function (scroll = false, close = true) {
 		if (scroll) {
 			// document.querySelector(`.main-nav`).style.opacity = 1;
